@@ -1,0 +1,408 @@
+/* 1. Базовые настройки экрана (Разрешаем сайту свободный скролл) */
+html, body, main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Общие настройки цвета фона */
+body {
+  background-color: #050505;
+}
+
+/* 3. Натяжение картинки цеха строго на один первый экран */
+.intro-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Ровно один экран в высоту */
+  background-image: url(../pfoto/View/01_V.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 1; /* Картинка лежит под контентом */
+}
+
+
+
+.intro-robot-layer {
+  position: absolute;
+  top: 90px;
+  right: 5%; 
+  width: 50%; 
+  height: 85vh;
+
+ 
+  
+  /* ИСПРАВЛЕНО: Точный путь к вашему файлу */
+  background-image: url(../pfoto/Robot/07.png); 
+  
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: bottom center; 
+  background-blend-mode: multiply; 
+  mix-blend-mode: multiply; 
+  z-index: 3; 
+}
+
+
+
+
+/* Настройка тега шапки */
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Главная панель меню Kaminski Robotics */
+.main-nav {
+  background-color: #0b0b0b;
+  border-bottom: 1px solid #222222;
+  height: 110px; 
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+
+  /* Фиксация меню и плавность анимации */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Меню перекрывает картинку */
+  transition: transform 0.4s ease-in-out; 
+  transform: translateY(0); 
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+.logo-block a, .logo-block a:visited {
+  color: #ffffff;
+}
+
+/* Массивная, заметная эмблема */
+.logo-img {
+  height: 90px; 
+  width: 90px;
+  object-fit: cover;
+  border-radius: 4px; 
+  border: 1px solid white; 
+}
+
+.logo-text {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Смещение меню в правый край */
+.nav-links {
+  display: flex;
+  gap: 70px; 
+  margin-left: auto; 
+  margin-right: 80px; 
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #d4af37; 
+}
+
+/* Настройка синей кнопки в стиле Boston Dynamics */
+.nav-action {
+  display: flex;
+  align-items: center;
+}
+
+.btn-sales {
+  background-color: #007bc4;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.btn-sales:hover {
+  background-color: #005da1;
+}
+
+
+
+
+
+
+
+/* 5. Настройка размашистых текстовых разделов */
+.site-section {
+  position: relative;
+  z-index: 2; /* Поднимает текст над фоновой картинкой первого экрана */
+  width: 100%;
+  min-height: 100vh; /* Каждый блок занимает ровно один экран */
+  
+  /* ИСПРАВЛЕНО: Теперь элементы строятся сверху вниз, а не сжимаются вбок */
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #050505; 
+  border-bottom: 1px solid #111111; 
+  box-sizing: border-box; 
+}
+
+/* Опускаем самый первый раздел ниже, освобождая интро-рисунок */
+#products {
+  margin-top: 160vh; 
+}
+
+
+
+/* ИСПРАВЛЕНО: Даем 200px чистого пространства между разделами, чтобы разнести их */
+.site-section + .site-section {
+  margin-top: 200px; 
+}
+
+/* Настройка текстового контейнера */
+.section-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Брутальные заголовки с синей чертой */
+.section-content h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  border-left: 4px solid #007bc4; 
+  padding-left: 15px;
+}
+
+/* Инженерный текст описания */
+.section-content p {
+  color: #aaaaaa; 
+  font-size: 16px;
+  line-height: 1.8; 
+  margin-bottom: 25px;
+}
+
+/* 6. Технические классы для «умного меню» */
+.top-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; 
+  z-index: 10000; 
+  pointer-events: auto;
+}
+
+.main-nav.nav-hidden {
+  transform: translateY(-110px);
+}
+
+/* Дополнительные стили для объемного описания продукта */
+.product-block {
+  margin-bottom: 40px; /* Отступы между смысловыми абзацами */
+}
+
+.product-block h3 {
+  color: #007bc4; /* Синие аккуратные подзаголовки */
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Стили для галереи фото и видео */
+.product-media-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #111111;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #222222;
+}
+
+.media-item span {
+  color: #666666;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-video {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 4px;
+  background-color: #000000;
+}
+
+
+
+.media-images {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ИСПРАВЛЕНО: Настройка карточки-контейнера для картинки */
+.media-images .media-item {
+  flex: 1; /* Даем картинкам одинаковую ширину */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем робота внутри карточки */
+  background-color: #111111;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #222222;
+}
+
+
+
+/* ИСПРАВЛЕНО: Для вертикальной картинки робота оставляем бережное сжатие без обрезки */
+.media-images .media-item:nth-child(2) .product-thumb {
+  object-fit: contain; 
+}
+
+
+/* ИСПРАВЛЕНО: Для горизонтального чертежа включаем полное растягивание по ширине блока.
+   Теперь он раскроется от края до края, и все надписи станут четко видны! */
+.media-images .media-item:first-child .product-thumb {
+  object-fit: fill; 
+}
+
+
+
+/* ИСПРАВЛЕНО: Полностью переделываем логику масштабирования картинки робота */
+.product-thumb {
+  width: 100%;       /* Растягиваем по ширине карточки */
+  max-height: 500px; /* Ограничиваем максимальную высоту, чтобы робот не улетал за экран */
+  
+  /* ГЛАВНЫЕ СТРОЧКИ ДЛЯ ИСПРАВЛЕНИЯ: */
+  object-fit: contain; /* Силой сжимает картинку БЕЗ ОБРЕЗКИ. Теперь робот войдет целиком! */
+  background-color: #0b0b0b; /* Темная подложка, если картинка вертикальная */
+}
+
+
+
+/* Окно-контейнер для плеера */
+.video-box {
+  background-color: #0b0b0b !important;
+  border: 1px solid #1c1c1c !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем видео и подпись */
+}
+
+/* Сам видеоплеер */
+.product-video {
+  width: 100%;
+  
+  /* 1. ЖЕСТКО ФИКСИРУЕМ ВЫСОТУ: теперь окно плеера не будет сжиматься при запуске */
+  height: 450px; 
+  
+  /* 2. ИДЕАЛЬНОЕ ЦВЕТОВОЕ СЛИЯНИЕ: красим пустоту по бокам в чисто черный цвет, 
+     чтобы вертикальное видео смотрелось стильно на темном фоне */
+  background-color: #000000; 
+  
+  /* 3. УМНОЕ МАСШТАБИРОВАНИЕ: видео аккуратно вписывается по высоте, 
+     а заставка-постер не растягивается как чудовище */
+  object-fit: contain; 
+  
+  border-radius: 4px;
+}
+
+/* Настройки контейнера контактов */
+.contacts-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Элемент списка контактов */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #111111;
+  border: 1px solid #222222;
+  padding: 18px 25px;
+  border-radius: 6px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: monospace; /* Инженерный моноширинный шрифт */
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* Эффект наведения — плашка плавно загорается фирменным синим */
+.contact-item:hover {
+  background-color: #0c1a24;
+  border-color: #007bc4;
+  transform: translateX(5px); /* Легкий сдвиг вправо при наведении */
+}
+
+.contact-icon {
+  font-size: 20px;
+  color: #007bc4; /* Синие иконки */
+  width: 25px;
+  text-align: center;
+}
+
+.contact-label {
+  color: #888888;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
