@@ -16,7 +16,6 @@ window.addEventListener('scroll', () => {
 // 2. УМНОЕ СЛЕЖЕНИЕ ЗА МЫШКОЙ (Вместо триггера)
 window.addEventListener('mousemove', (e) => {
   // e.clientY — это точное положение курсора от верха экрана в пикселях.
-  // Если мышка поднялась выше 30 пикселей (около 2.5 - 3 см) — показываем меню!
   if (e.clientY < 100) {
     nav.classList.remove('nav-hidden');
   }
@@ -30,7 +29,22 @@ nav.addEventListener('mouseleave', () => {
 });
 
 // 4. Плавный возврат в самое начало при клике на логотип Kaminski Robotics
-document.getElementById('back-to-top').addEventListener('click', (e) => {
-  e.preventDefault(); 
-  window.scrollTo({ top: 0, behavior: 'smooth' }); 
-});
+// Добавлена проверка (if), чтобы код не выдавал ошибку, если логотип еще не загрузился
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+  });
+}
+
+//// 5. ИСПРАВЛЕНО: Рабочий клик по мобильному гамбургеру
+const hamburger = document.querySelector('.hamburger');
+if (hamburger) {
+  hamburger.onclick = () => {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+      navLinks.classList.toggle('active');
+    }
+  }; // Лишние буквы "VS" удалены, теперь всё чисто!
+}
