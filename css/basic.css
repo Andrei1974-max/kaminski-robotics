@@ -21,7 +21,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh; /* Ровно один экран в высоту */
-  background-image: url(../pfoto/View/01_V.png);
+  background-image: url(../pfoto/View_01.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -40,7 +40,7 @@ body {
  
   
   /* ИСПРАВЛЕНО: Точный путь к вашему файлу */
-  background-image: url(../pfoto/Robot/07.png); 
+  background-image: url(../pfoto/Robot_02.png); 
   
   background-size: contain; 
   background-repeat: no-repeat;
