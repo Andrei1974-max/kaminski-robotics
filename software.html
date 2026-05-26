@@ -36,6 +36,7 @@
     <div class="top-trigger"></div>
 
     <header>
+      <!-- Наша эталонная фиксированная шапка меню -->
       <nav class="main-nav">
         <div class="logo-block">
           <a
@@ -59,7 +60,7 @@
         <div class="lang-switch">
           <!-- ИСПРАВЛЕНО: Ссылка RU теперь ведет на созданный нами русский файл! -->
           <span class="lang-current">EN</span> |
-          <a href="index-ru.html" class="lang-link">RU</a>
+          <a href="software-ru.html" class="lang-link">RU</a>
         </div>
 
         <div class="hamburger">☰</div>
@@ -80,21 +81,52 @@
     </header>
 
     <main>
-      <!-- Первый экран (Заставка) — на ПК выглядит роскошно, на мобилках скроется автоматически -->
-      <div class="intro-bg">
-        <div class="intro-robot-layer"></div>
-        <div class="intro-content">
-          <h1>Sentinel KR-01</h1>
-          <h2>Heavy Hydraulic Humanoid Platform</h2>
-          <p class="intro-manifest-text">
-            Kaminski Robotics develops next-generation heavy hydraulic humanoid
-            platforms designed to dominate the physical world. By integrating
-            raw engineering discipline with cutting-edge real-time software
-            systems, we build high-pressure autonomous machinery capable of
-            executing complex industrial operations in extreme environments.
-          </p>
+      <!-- РАЗДЕЛ РЕШЕНИЯ (SOFTWARE) -->
+      <section
+        id="software"
+        class="site-section"
+        style="margin-top: 110px !important"
+      >
+        <div class="section-content">
+          <h2>Systems Intelligence & Software Engineering</h2>
+
+          <div class="product-block">
+            <h3>Low-Level Actuation Software & Fluid Dynamics Control</h3>
+            <p>
+              The robot's core architecture is driven by our proprietary
+              real-time operating system (RTOS). System algorithms process
+              telemetry from pressure and position sensors at multi-kilohertz
+              frequencies. This ensures instantaneous response from proportional
+              hydraulic valves, precise fluid dosing at 130 Bar pressure, and
+              completely eliminates latency and jerks during heavy structural
+              motion.
+            </p>
+          </div>
+
+          <div class="product-block">
+            <h3>Onboard Neural Networks & Dynamic Biomechanics</h3>
+            <p>
+              The autonomy of the Sentinel KR-01 is powered by an onboard
+              computing cluster running deep neural networks. The artificial
+              intelligence continuously solves dynamic balancing (equilibrium)
+              equations, predicts load distribution across the tactical steel
+              chassis, and coordinates the 5-axis monolithic hand actuation
+              using computer vision and space recognition systems.
+            </p>
+          </div>
+
+          <div class="product-block">
+            <h3>Control Programs & Applied Software Environments</h3>
+            <p>
+              An integrated development environment allows operators to program
+              complex industrial scenarios for the platform. The applied
+              software stack includes utilities for remote hydraulic system
+              diagnostics, sensor calibration, and physical stress simulation
+              before executing real-world field operations.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- АНГЛИЙСКИЙ КОРПОРАТИВНЫЙ ПОДВАЛ (ВСЕ ССЫЛКИ АКТИВНЫ) -->
@@ -139,6 +171,7 @@
           <a href="hardware.html">Hardware & Robotics</a>
           <a href="software.html">Software & Systems</a>
           <a href="research.html">R&D Laboratory</a>
+          <a href="devlog.html">Dev Log</a>
         </div>
 
         <!-- Живые ресурсы -->
@@ -159,6 +192,7 @@
         <p>Minsk, Belarus</p>
       </div>
     </footer>
+
     <script src="js/script.js"></script>
   </body>
 </html>

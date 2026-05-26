@@ -59,20 +59,17 @@
         <div class="lang-switch">
           <!-- ИСПРАВЛЕНО: Ссылка RU теперь ведет на созданный нами русский файл! -->
           <span class="lang-current">EN</span> |
-          <a href="index-ru.html" class="lang-link">RU</a>
+          <a href="research-ru.html" class="lang-link">RU</a>
         </div>
 
         <div class="hamburger">☰</div>
 
         <div class="nav-links">
-          <!-- ОСТАВЛЯЕМ ТОЛЬКО ТРИ ГЛАВНЫЕ ССЫЛКИ, КОНТАКТЫ ОТСЮДА СТИРАЕМ -->
           <a href="hardware.html">Hardware & Robotics</a>
           <a href="software.html">Software & Systems</a>
-          <a href="research.html">R&D Lab</a>
+          <a href="research.html" class="lang-current">R&D Lab</a>
           <a href="devlog.html">Dev Log</a>
         </div>
-
-        <!-- Вот эта синяя кнопка и будет нашей единственной, главной графой контактов в шапке! -->
         <div class="nav-action">
           <a href="contact.html" class="btn-sales">Contact Sales</a>
         </div>
@@ -80,38 +77,55 @@
     </header>
 
     <main>
-      <!-- Первый экран (Заставка) — на ПК выглядит роскошно, на мобилках скроется автоматически -->
-      <div class="intro-bg">
-        <div class="intro-robot-layer"></div>
-        <div class="intro-content">
-          <h1>Sentinel KR-01</h1>
-          <h2>Heavy Hydraulic Humanoid Platform</h2>
-          <p class="intro-manifest-text">
-            Kaminski Robotics develops next-generation heavy hydraulic humanoid
-            platforms designed to dominate the physical world. By integrating
-            raw engineering discipline with cutting-edge real-time software
-            systems, we build high-pressure autonomous machinery capable of
-            executing complex industrial operations in extreme environments.
-          </p>
+      <!-- ИСПРАВЛЕНО: Полностью убран чужой манифест, блок поднят высоко к меню -->
+      <section
+        id="research"
+        class="site-section"
+        style="margin-top: 30px !important; padding-top: 0 !important"
+      >
+        <div class="section-content">
+          <h2>R&D Laboratory | Dev Log</h2>
+
+          <div class="product-block">
+            <h3>Parametric Modeling in COMPASS-3D</h3>
+            <p>
+              Active research and development stage. Our core engineering unit
+              is currently optimizing the 5-axis monolithic duralumin forearm
+              manifold. Telemetry data from high-pressure fluid simulations is
+              being directly integrated into our physical prototype schematics.
+            </p>
+          </div>
+
+          <div class="product-block">
+            <h3>Neural Network Training Logs</h3>
+            <p>
+              Our systems engineering department has initialized stress tests
+              for the dynamic equilibrium algorithms. Onboard neural networks
+              are being trained within simulated environments to compute
+              structural loads and manage fluid distribution under unpredictable
+              external impacts.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Раздел 2: БЛОК-ЯКОРЬ ДЛЯ ПЛАВНОЙ ПРОКРУТКИ К ПОДВАЛУ -->
+      <section
+        id="contacts"
+        class="site-section"
+        style="min-height: auto; padding-bottom: 40px"
+      ></section>
     </main>
 
-    <!-- АНГЛИЙСКИЙ КОРПОРАТИВНЫЙ ПОДВАЛ (ВСЕ ССЫЛКИ АКТИВНЫ) -->
+    <!-- КОРПОРАТИВНЫЙ ПОДВАЛ (FOOTER) В СТИЛЕ BOSTON DYNAMICS -->
     <footer class="site-footer">
       <div class="footer-container">
-        <!-- 1. Левый блок: Нажатие на эмблему возвращает на Главную английскую! -->
-        <!-- 1. Левый блок: Логотип и кликабельные соцсети -->
         <div class="footer-brand">
-          <a href="index.html">
-            <img
-              src="pfoto/Emblema_01.jpeg"
-              alt="Kaminski Robotics Логотип"
-              class="footer-logo"
-              style="cursor: pointer"
-            />
-          </a>
-          <!-- ИСПРАВЛЕНО: Твои фирменные «смайлики»-иконки с рабочими ссылками -->
+          <img
+            src="pfoto/Emblema_01.jpeg"
+            alt="Kaminski Robotics Logo"
+            class="footer-logo"
+          />
           <div class="footer-socials">
             <!-- 1. ТЕЛЕГРАМ: бьет точно в твой личный чат! -->
             <a
@@ -133,22 +147,19 @@
             <a href="mailto:gold.indastries@gmail.com" title="E-mail">✉</a>
           </div>
         </div>
-
         <div class="footer-column">
           <h4>Navigation</h4>
           <a href="hardware.html">Hardware & Robotics</a>
           <a href="software.html">Software & Systems</a>
           <a href="research.html">R&D Laboratory</a>
+          <a href="devlog.html">Dev Log</a>
         </div>
-
-        <!-- Живые ресурсы -->
         <div class="footer-column">
           <h4>Resources</h4>
           <a href="#">Documentation</a>
-          <a href="research.html">COMPASS-3D Models</a>
+          <a href="#">COMPASS-3D Models</a>
           <a href="#">Dev Log Video</a>
         </div>
-
         <div class="footer-column">
           <h4>Contacts</h4>
           <a href="contact.html">Contact Sales</a>
@@ -159,6 +170,7 @@
         <p>Minsk, Belarus</p>
       </div>
     </footer>
+
     <script src="js/script.js"></script>
   </body>
 </html>

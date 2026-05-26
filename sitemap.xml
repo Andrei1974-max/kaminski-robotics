@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 1. Главная страница (EN) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- 2. Главная страница (RU) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- 3. Hardware & Robotics (EN) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- 4. Робототехника и железо (RU) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- 5. Программное обеспечение (RU) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- 6. R&D лаборатория (RU) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- 7. Контакты (EN) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- 8. Контакты (RU) -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>

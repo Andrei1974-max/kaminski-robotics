@@ -1,7 +1,9 @@
 /* ==========================================
    1. БАЗОВЫЕ НАСТРОЙКИ ЭКРАНА И СБРОС ОТСТУПОВ
    ========================================== */
-html, body, main {
+html,
+body,
+main {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -28,37 +30,38 @@ header {
 .main-nav {
   background-color: #0b0b0b;
   border-bottom: 1px solid #222222;
-  height: 110px; 
+  height: 110px;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 30px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999; 
-  transition: transform 0.4s ease-in-out; 
-  transform: translateY(0); 
+  z-index: 9999;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(0);
 }
 
 .logo-block {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
 
-.logo-block a, .logo-block a:visited {
+.logo-block a,
+.logo-block a:visited {
   color: #ffffff;
 }
 
 .logo-img {
-  height: 90px; 
+  height: 90px;
   width: 90px;
   object-fit: cover;
-  border-radius: 4px; 
-  border: 1px solid white; 
+  border-radius: 4px;
+  border: 1px solid white;
 }
 
 .logo-text {
@@ -79,9 +82,9 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 70px; 
-  margin-left: auto; 
-  margin-right: 80px; 
+  gap: 70px;
+  margin-left: 30px;
+  margin-right: 80px;
 }
 
 .nav-links a {
@@ -94,19 +97,31 @@ header {
 }
 
 .nav-links a:hover {
-  color: #d4af37; 
+  color: #d4af37;
 }
 
+/* Синяя кнопка аккуратно встает по центру чуть ниже, 
+     чтобы никогда больше не улетать за правый край экрана! */
 .nav-action {
-  display: flex;
-  align-items: center;
+  width: 100% !important;
+  display: flex !important;
+  align-items: left;
+  justify-content: right !important; /* Центрируем кнопку на второй строчке */
+
+  /* ИСПРАВЛЕНО: Добавляем жесткий правый отступ, который силой сдвинет кнопку влево, 
+       внутрь безопасных границ экрана! */
+  padding-right: 10px !important;
+  box-sizing: border-box !important; /* Защита: отступы не будут раздувать блок наружу */
+
+  margin-top: 8px !important;
+  order: 4 !important;
 }
 
 .btn-sales {
   background-color: #007bc4;
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 22px;
+  padding: 5px 5px;
   border-radius: 4px;
   font-weight: 600;
   font-size: 14px;
@@ -123,8 +138,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20px; 
-  z-index: 10000; 
+  height: 20px;
+  z-index: 10000;
   pointer-events: auto;
 }
 
@@ -140,27 +155,27 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   background-image: url(../pfoto/View_01.png); /* Прямой путь без матрёшек */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .intro-robot-layer {
   position: absolute;
   top: 90px;
-  right: 5%; 
-  width: 50%; 
+  right: 5%;
+  width: 50%;
   height: 85vh;
   background-image: url(../pfoto/Robot_02.png); /* Прямой путь без матрёшек */
-  background-size: contain; 
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom center; 
-  background-blend-mode: multiply; 
-  mix-blend-mode: multiply; 
-  z-index: 3; 
+  background-position: bottom center;
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  z-index: 3;
 }
 
 /* ==========================================
@@ -168,24 +183,24 @@ header {
    ========================================== */
 .site-section {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   width: 100%;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #050505; 
-  border-bottom: 1px solid #111111; 
-  box-sizing: border-box; 
+  background-color: #050505;
+  border-bottom: 1px solid #111111;
+  box-sizing: border-box;
 }
 
 #products {
-  margin-top: 160vh; 
+  margin-top: 160vh;
 }
 
 .site-section + .site-section {
-  margin-top: 200px; 
+  margin-top: 200px;
 }
 
 .section-content {
@@ -203,23 +218,23 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 30px;
-  border-left: 4px solid #007bc4; 
+  border-left: 4px solid #007bc4;
   padding-left: 15px;
 }
 
 .section-content p {
-  color: #aaaaaa; 
+  color: #aaaaaa;
   font-size: 16px;
-  line-height: 1.8; 
+  line-height: 1.8;
   margin-bottom: 25px;
 }
 
 .product-block {
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .product-block h3 {
-  color: #007bc4; 
+  color: #007bc4;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -260,14 +275,14 @@ header {
   border: 1px solid #1c1c1c !important;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .product-video {
   width: 100%;
   height: 450px; /* Ваша жёсткая фиксация высоты */
-  background-color: #000000; 
-  object-fit: contain; 
+  background-color: #000000;
+  object-fit: contain;
   border-radius: 4px;
 }
 
@@ -278,10 +293,10 @@ header {
 }
 
 .media-images .media-item {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   background-color: #111111;
   padding: 15px;
   border-radius: 6px;
@@ -289,17 +304,17 @@ header {
 }
 
 .media-images .media-item:nth-child(2) .product-thumb {
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .media-images .media-item:first-child .product-thumb {
-  object-fit: fill; 
+  object-fit: fill;
 }
 
 .product-thumb {
-  width: 100%;       
-  max-height: 500px; 
-  background-color: #0b0b0b; 
+  width: 100%;
+  max-height: 500px;
+  background-color: #0b0b0b;
 }
 
 /* ==========================================
@@ -330,7 +345,7 @@ header {
   color: #ffffff !important;
   text-decoration: none;
   font-size: 16px;
-  font-family: monospace; 
+  font-family: monospace;
   transition: 0.3s ease-in-out;
   width: 100%;
   max-width: 500px;
@@ -340,12 +355,12 @@ header {
 .contact-item:hover {
   background-color: #0c1a24;
   border-color: #007bc4;
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }
 
 .contact-icon {
   font-size: 20px;
-  color: #007bc4; 
+  color: #007bc4;
   width: 25px;
   text-align: center;
 }
@@ -362,10 +377,141 @@ header {
    7. УМНЫЙ АДАПТИВ ПОД ЛЮБЫЕ ЭКРАНЫ
    ========================================== */
 
-/* 💻 Ноутбуки и мониторы чуть меньше обычного (до 1200px) */
-@media (max-width: 1200px) {
-  .nav-links { gap: 40px; margin-right: 40px; }
-  .logo-text { font-size: 18px; }
+/* ==========================================
+   ТОЧЕЧНАЯ КАЛИБРОВКА ШАПКИ ДЛЯ СМАРТФОНОВ
+   ========================================== */
+
+/* 📱 3. СМАРТФОНЫ СВЕРХКОМПАКТНЫЕ (до 320px) */
+@media (max-width: 320px) {
+  .logo-text {
+    font-size: 11px !important; /* Предельно аккуратный шрифт для старых iPhone */
+    max-width: 100px !important;
+  }
+  .logo-img {
+    height: 38px !important;
+    width: 38px !important;
+  }
+  .hamburger {
+    font-size: 22px !important;
+  }
+  .btn-sales {
+    font-size: 10px !important;
+    padding: 5px 12px !important;
+  }
+  #products {
+    margin-top: 160px !important;
+  }
+}
+
+/* 📱 2. СМАРТФОНЫ БОЛЬШИЕ МОБИЛЬНЫЕ (до 425px) */
+@media (max-width: 425px) {
+  .main-nav {
+    flex-wrap: wrap !important; /* Разрешаем элементам аккуратно группироваться */
+    justify-content: space-between !important;
+    padding: 8px 12px !important;
+  }
+  .logo-block {
+    max-width: 70% !important; /* Логотип занимает свою безопасную левую зону */
+  }
+  .logo-text {
+    font-size: 13px !important;
+    max-width: 120px !important; /* Еще сильнее держим дистанцию от гамбургера */
+  }
+  /* Гамбургер встает четко в правый угол, не прижимаясь к тексту */
+  .hamburger {
+    margin-right: 5px !important;
+    order: 2 !important;
+  }
+  /* Синяя кнопка аккуратно встает по центру чуть ниже, 
+     чтобы никогда больше не улетать за правый край экрана! */
+  .nav-action {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 8px !important;
+    order: 4 !important;
+  }
+  .btn-sales {
+    width: auto !important;
+    text-align: center !important;
+    padding: 6px 16px !important;
+  }
+  /* Опускаем текст продуктов еще ниже, так как мобильное меню стало двухстрочным */
+  #products {
+    margin-top: 170px !important;
+  }
+}
+
+/* 📱 Смартфоны (до 480px) */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 14px;
+  }
+  .logo-img {
+    height: 50px;
+    width: 50px;
+  }
+  .main-nav {
+    padding: 10px 15px;
+  }
+  .hamburger {
+    margin-right: 15px;
+  }
+  .btn-sales {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  .section-content h2 {
+    font-size: 24px;
+  }
+  .contact-item {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+}
+
+/* 📱 1. СМАРТФОНЫ СРЕДНИЕ (до 575px) */
+@media (max-width: 575px) {
+  .main-nav {
+    padding: 10px 15px !important;
+    height: auto !important; /* Разрешаем шапке дышать, если элементы перенесутся */
+    min-height: 90px !important;
+  }
+  .logo-text {
+    font-size: 14px !important;
+    max-width: 140px !important; /* Жесткий барьер: текст не налезет на полоски */
+    line-height: 1.2 !important;
+  }
+  .logo-img {
+    height: 45px !important;
+    width: 45px !important;
+  }
+  .hamburger {
+    margin-right: 15px !important;
+    font-size: 26px !important;
+  }
+  .btn-sales {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* 📠 ПЛАНШЕТЫ И СМАРТФОНЫ (до 768px) */
+@media (max-width: 768px) {
+  /* ... ваши остальные настройки меню и гамбургера остаются прежними ... */
+
+  /* ИСПРАВЛЕНО: Эта строчка намертво стирает мешающий текст, 
+     а также саму картинку робота и цеха с экранов мобильных устройств! */
+  .intro-bg,
+  .intro-robot-layer,
+  .intro-content {
+    display: none !important;
+  }
+
+  /* Подтягиваем первый текстовый раздел Products к самому верху, 
+     чтобы сайт на телефоне начинался красиво и сразу под шапкой меню */
+  #products {
+    margin-top: 110px !important;
+  }
 }
 
 /* 📠 Планшеты (до 768px) */
@@ -375,14 +521,14 @@ header {
     padding: 15px 30px;
     justify-content: space-between;
   }
-  
+
   /* Включаем иконку гамбургера на планшетах и мобилках */
   .hamburger {
     display: block;
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: 30px;
   }
-  
+
   /* Ссылки меню изначально прячутся в красивую мобильную шторку */
   .nav-links {
     display: none; /* Скроем для простоты, пока не настроим шторку до конца */
@@ -393,7 +539,7 @@ header {
     gap: 15px;
     margin: 15px 0 0 0;
   }
-  
+
   /* Эффект выезда меню, когда нажат гамбургер (класс .active добавляется из нашего JS) */
   .nav-links.active {
     display: flex;
@@ -406,50 +552,276 @@ header {
     top: auto;
     bottom: 0;
     right: 0;
-    opacity: 0.25; 
+    opacity: 0.25;
   }
-  
+
   /* Картинки чертежей встают в ровную вертикальную ленту */
-  .media-images { 
-    flex-direction: column; 
+  .media-images {
+    flex-direction: column;
     gap: 20px;
-  } 
-  
+  }
+
   .product-video {
     height: auto;
     max-height: 350px;
   }
 }
 
-/* 📱 Смартфоны (до 480px) */
-@media (max-width: 480px) {
-  .logo-text { font-size: 14px; }
-  .logo-img { height: 50px; width: 50px; }
-  .main-nav { padding: 10px 15px; }
-  .hamburger { margin-right: 15px; }
-  .btn-sales { padding: 8px 15px; font-size: 12px; }
-  .section-content h2 { font-size: 24px; }
-  .contact-item { font-size: 14px; padding: 12px 15px; }
+/* 📠 ПРОМЕЖУТОЧНЫЕ ДИСПЛЕИ И МАЛЕНЬКИЕ ПЛАНШЕТЫ (769px) */
+@media (max-width: 769px) {
+  .main-nav {
+    /* ИСПРАВЛЕНО: Уменьшаем боковые отступы шапки до 20px, чтобы освободить место */
+    padding: 0 20px !important;
+    height: 110px !important;
+  }
+
+  .logo-text {
+    font-size: 16px !important;
+  }
+
+  .logo-img {
+    height: 70px !important; /* Чуть уменьшаем эмблему для экономии места */
+    width: 70px !important;
+  }
+
+  .nav-links {
+    /* ИСПРАВЛЕНО: Резко уменьшаем шаг между ссылками с 70px до 20px, 
+       чтобы они компактно встали по центру и не выталкивали синюю кнопку! */
+    gap: 20px !important;
+    margin-left: auto !important;
+    margin-right: 30px !important; /* Уменьшаем правый зазор перед кнопкой */
+  }
+
+  .btn-sales {
+    padding: 8px 16px !important;
+    font-size: 13px !important; /* Делаем синюю кнопку чуть компактнее */
+  }
 }
 
+/* 💻 Ноутбуки и мониторы чуть меньше обычного (до 1200px) */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 40px;
+    margin-right: 40px;
+  }
+  .logo-text {
+    font-size: 18px;
+  }
+}
 
-/* 📠 ПЛАНШЕТЫ И СМАРТФОНЫ (до 768px) */
+/* Стили переключателя языков в меню */
+.lang-switch {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 25px; /* Небольшой отступ от логотипа */
+  font-family: monospace;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.lang-link {
+  color: #aaaaaa !important;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.lang-link:hover {
+  color: #007bc4 !important; /* При наведении подсвечивается нашим фирменным синим */
+}
+
+.lang-current {
+  color: #ffffff; /* Активный язык горит белым */
+  font-weight: bold;
+}
+
+/* Скрытие переключателя на маленьких смартфонах, чтобы не перегружать строку */
+@media (max-width: 425px) {
+  .lang-switch {
+    margin-left: 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ==========================================
+   СТИЛИ ДЛЯ МАСШТАБНОГО КОРПОРАТИВНОГО ФУТЕРА
+   ========================================== */
+.site-footer {
+  background-color: #0b0b0b;
+  border-top: 1px solid #222222;
+  padding: 60px 5% 30px 5%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #444444;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.footer-socials a:hover {
+  color: #007bc4;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  border-top: 1px solid #1c1c1c;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #444444;
+  font-size: 12px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Адаптация подвала под смартфоны */
 @media (max-width: 768px) {
-  
-  /* ... ваши остальные настройки меню и гамбургера остаются прежними ... */
-
-  /* ИСПРАВЛЕНО: Эта строчка намертво стирает мешающий текст, 
-     а также саму картинку робота и цеха с экранов мобильных устройств! */
-  .intro-bg, 
-  .intro-robot-layer, 
-  .intro-content {
-    display: none !important; 
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
   }
-
-  /* Подтягиваем первый текстовый раздел Products к самому верху, 
-     чтобы сайт на телефоне начинался красиво и сразу под шапкой меню */
-  #products {
-    margin-top: 110px !important; 
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
+/* Настройки текстового контейнера на главной картинке */
+.intro-content {
+  position: absolute;
+  top: 45%; /* Слегка скорректировали центровку по вертикали */
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+  z-index: 5;
+  padding: 35px;
+  background: rgba(
+    5,
+    5,
+    5,
+    0.65
+  ); /* Чуть-чуть плотнее сделали подложку для четкости */
+  border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+  border-radius: 4px;
+}
+
+.intro-content h1 {
+  color: #ffffff;
+  font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+  font-weight: 900;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.intro-content h2 {
+  color: #007bc4;
+  font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-manifest-text {
+  color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+  font-size: 18px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+  line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+  margin: 0;
+}
+
+.intro-content_two {
+  position: absolute;
+  top: 50%; /* Слегка скорректировали центровку по вертикали */
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+  z-index: 5;
+  padding: 35px;
+  background: rgba(
+    5,
+    5,
+    5,
+    0.65
+  ); /* Чуть-чуть плотнее сделали подложку для четкости */
+  border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+  border-radius: 4px;
+}
+
+.intro-content_two h1 {
+  color: #ffffff;
+  font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+  font-weight: 900;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.intro-content_two h2 {
+  color: #007bc4;
+  font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
