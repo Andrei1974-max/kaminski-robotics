@@ -1,60 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- 1. Главная страница (EN) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- 2. Главная страница (RU) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- 3. Hardware & Robotics (EN) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- 4. Робототехника и железо (RU) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- 5. Программное обеспечение (RU) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- 6. R&D лаборатория (RU) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- 7. Контакты (EN) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- 8. Контакты (RU) -->
-  <url>
-    <loc>https://github.io</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/index-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/index.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/hardware-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/software-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/research-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/devlog-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/contact-ru.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/hardware.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/software.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/research.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/devlog.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://andrei1974-max.github.io/kaminski-robotics/contact.html</loc>
+<lastmod>2026-05-26T12:56:53+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
