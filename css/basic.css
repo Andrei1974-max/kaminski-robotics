@@ -403,41 +403,98 @@ header {
   }
 }
 
-/* 📱 2. СМАРТФОНЫ БОЛЬШИЕ МОБИЛЬНЫЕ (до 425px) */
-@media (max-width: 425px) {
-  .main-nav {
-    flex-wrap: wrap !important; /* Разрешаем элементам аккуратно группироваться */
-    justify-content: space-between !important;
-    padding: 8px 12px !important;
+/* Экстремально узкие экраны (старые iPhone SE на 320px) */
+@media (max-width: 340px) {
+  .logo-text {
+    display: none !important; /* На 320px скрываем текст названия, спасая синюю кнопку от выдавливания! */
   }
   .logo-block {
-    max-width: 70% !important; /* Логотип занимает свою безопасную левую зону */
+    max-width: auto !important;
   }
+}
+
+/* ==========================================================================
+   📱 2. СМАРТФОНЫ И МОБИЛЬНЫЕ УСТРОЙСТВА (320px - 425px)
+   ========================================================================== */
+@media (max-width: 425px) {
+  /* Выстраиваем элементы шапки строго в один свободный ряд */
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    gap: 10px !important;
+    height: 65px !important;
+    box-sizing: border-box !important;
+    /* max-width: 0%; */
+  }
+
+  /* Логотип: оставляем только брутальную эмблему, чтобы освободить место */
+  .logo-block {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .logo-block img {
+    height: 36px !important;
+    width: 36px !important;
+  }
+
+  /* СКРЫВАЕМ ТЕКСТ НАЗВАНИЯ НА ВСЕХ МОБИЛКАХ, ЧТОБЫ СПАСТИ КНОПКУ ОТ СРЕЗАНИЯ */
   .logo-text {
-    font-size: 13px !important;
-    max-width: 120px !important; /* Еще сильнее держим дистанцию от гамбургера */
+    display: none !important;
   }
-  /* Гамбургер встает четко в правый угол, не прижимаясь к тексту */
+
+  /* Компактный тумблер языков */
+  .lang-switch {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Иконка бургер-меню */
   .hamburger {
-    margin-right: 5px !important;
-    order: 2 !important;
+    font-size: 20px !important;
+    padding: 0 4px !important;
+    order: 3 !important;
   }
-  /* Синяя кнопка аккуратно встает по центру чуть ниже, 
-     чтобы никогда больше не улетать за правый край экрана! */
+
+  /* Контейнер синей кнопки */
   .nav-action {
-    width: 100% !important;
-    justify-content: center !important;
-    margin-top: 8px !important;
-    order: 4 !important;
-  }
-  .btn-sales {
     width: auto !important;
-    text-align: center !important;
-    padding: 6px 16px !important;
+    margin-top: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* Кнопка всегда в самом правом углу */
   }
-  /* Опускаем текст продуктов еще ниже, так как мобильное меню стало двухстрочным */
-  #products {
-    margin-top: 170px !important;
+
+  /* Синяя кнопка: теперь сидит как влитая, места валом! */
+  .btn-sales {
+    font-size: 11px !important;
+    padding: 6px 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* Идеальные зазоры для контента под шапкой */
+  /* ИСПРАВЛЕНО: Силой опускаем контент ниже на смартфонах, чтобы меню его не закрывало */
+  .site-section,
+  #hardware.site-section,
+  #research.site-section,
+  #software.site-section,
+  #contacts.site-section {
+    margin-top: 110px !important; /* Увеличили со 80px до 110px, чтобы текст полностью вышел на свет */
+    padding-top: 15px !important;
+  }
+
+  .section-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -606,6 +663,23 @@ header {
   }
   .logo-text {
     font-size: 18px;
+  }
+  .main-nav {
+    /* flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    gap: 10px !important;
+    height: 65px !important;
+    box-sizing: border-box !important; */
+    /* max-width: 100%; */
+  }
+}
+
+@media (max-width: 1440px) {
+  .main-nav {
+    max-width: 100%;
   }
 }
 
