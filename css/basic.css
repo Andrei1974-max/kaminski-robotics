@@ -1066,6 +1066,30 @@ header {
     margin-top: 100px !important;
     padding-top: 10px !important;
   }
+
+  /* УЖИМАЕМ РАЗДУВАНИЕ ТЕКСТА: буквы становятся компактнее и не прыгают вверх! */
+  h1.main-title,
+  .section-content h2,
+  .div-intro-bg h1 {
+    font-size: 28px !important; /* Уменьшили размер заголовка, чтобы он не упирался в меню */
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+  }
+
+  .section-content p,
+  .intro-manifest-text {
+    font-size: 14px !important; /* Текст манифеста аккуратно сжимается */
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* Расширяем рабочую зону контента, чтобы строчки не ломались слишком рано */
+  .section-content {
+    width: 95% !important;
+    max-width: 720px !important;
+    padding: 20px 15px !important;
+    margin: 0 auto !important;
+  }
 }
 
 /* ==========================================================================
@@ -1189,5 +1213,41 @@ header {
   .btn-sales {
     padding: 4px 8px !important;
     font-size: 9.5px !important;
+  }
+}
+
+/* ==========================================================================
+   🤖 ФИНАЛЬНАЯ ЗАЩИТА ТЕКСТА ОТ ВЫТАЛКИВАНИЯ (ДИАПАЗОН: ДО 630px)
+   ========================================================================== */
+@media (max-width: 665px) {
+  /* Когда строчки начинают ломаться и расти вверх, мы силой отодвигаем весь контент ниже! */
+  .site-section,
+  #hardware.site-section,
+  #research.site-section,
+  #software.site-section,
+  #contacts.site-section {
+    margin-top: 155px !important; /* Увеличили зазор, чтобы раздувающийся текст никогда не достал до меню */
+    padding-top: 10px !important;
+  }
+
+  /* Дополнительно сжимаем шрифт заголовка, чтобы он занимал меньше места в высоту */
+  h1.main-title,
+  .section-content h2,
+  .div-intro-bg h1 {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Делаем абзацы манифеста чуть компактнее */
+  .section-content p,
+  .intro-manifest-text {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .intro-content {
+    top: 67%;
+    height: auto;
   }
 }
