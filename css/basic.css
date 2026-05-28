@@ -238,6 +238,17 @@ header {
   margin-top: 50px;
   width: 100%;
 }
+.product-block {
+  margin-bottom: 40px;
+}
+
+.product-block h3 {
+  color: #007bc4;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
 .video-box {
   background-color: #0b0b0b !important;
@@ -316,69 +327,6 @@ header {
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
   z-index: 3;
-}
-
-/* ==========================================
-   4. НАСТРОЙКА РАЗМАШИСТЫХ ТЕКСТОВЫХ РАЗДЕЛОВ
-   ========================================== */
-.site-section {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #050505;
-  border-bottom: 1px solid #111111;
-  box-sizing: border-box;
-}
-
-#products {
-  margin-top: 160vh;
-}
-
-.site-section + .site-section {
-  margin-top: 200px;
-}
-
-.section-content {
-  width: 100%;
-  max-width: 900px;
-  padding: 40px;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.section-content h2 {
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  border-left: 4px solid #007bc4;
-  padding-left: 15px;
-}
-
-.section-content p {
-  color: #aaaaaa;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-}
-
-.product-block {
-  margin-bottom: 40px;
-}
-
-.product-block h3 {
-  color: #007bc4;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
 }
 
 /* ==========================================
@@ -515,36 +463,6 @@ header {
 }
 
 /* ==========================================
-   7. УМНЫЙ АДАПТИВ ПОД ЛЮБЫЕ ЭКРАНЫ
-   ========================================== */
-
-/* Стили переключателя языков в меню */
-.lang-switch {
-  color: #555555;
-  font-size: 14px;
-  font-weight: 600;
-  margin-left: 25px; /* Небольшой отступ от логотипа */
-  font-family: monospace;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.lang-link {
-  color: #aaaaaa !important;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.lang-link:hover {
-  color: #007bc4 !important; /* При наведении подсвечивается нашим фирменным синим */
-}
-
-.lang-current {
-  color: #ffffff; /* Активный язык горит белым */
-  font-weight: bold;
-}
-
-/* ==========================================
    СТИЛИ ДЛЯ МАСШТАБНОГО КОРПОРАТИВНОГО ФУТЕРА
    ========================================== */
 .site-footer {
@@ -638,12 +556,12 @@ header {
 /* Настройки текстового контейнера на главной картинке */
 .intro-content {
   position: absolute;
-  top: 45%; /* Слегка скорректировали центровку по вертикали */
+  top: 50%; /* Слегка скорректировали центровку по вертикали */
   left: 5%;
   transform: translateY(-50%);
   max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
   z-index: 5;
-  padding: 35px;
+  padding: 10px;
   background: rgba(
     5,
     5,
@@ -715,241 +633,54 @@ header {
   letter-spacing: 1px;
 }
 
-/* ==========================================================================
-   📐 💻 КАСКАДНАЯ ОПТИМИЗАЦИЯ ДЛЯ БОЛЬШИХ ЭКРАНОВ
-   ========================================================================== */
-
-/* 💻 @media (max-width: 1440px) */
-@media (max-width: 1440px) {
-  .main-nav {
-    max-width: 100% !important; /* Твой победный эластичный щит */
-  }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #111111;
+  border: 1px solid #222222;
+  padding: 18px 25px;
+  border-radius: 6px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: monospace;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
-/* 💻 @media (max-width: 1200px) */
-@media (max-width: 1230px) {
-  .nav-links {
-    gap: 30px !important;
-  }
-  .nav-action {
-    margin-left: 30px !important;
-  }
-  .logo-text {
-    font-size: 18px !important;
-  }
+.contact-item:hover {
+  background-color: #0c1a24;
+  border-color: #007bc4;
+  transform: translateX(5px);
 }
 
-/* ==========================================================================
-   📟 5. СРЕДНИЕ ПЛАНШЕТЫ (1024px - 821px) — ВСЁ ЕЩЁ В ОДИН РЯД
-   ========================================================================== */
-@media (max-width: 1080px) and (min-width: 821px) {
-  .main-nav {
-    height: 95px !important;
-    padding: 0 20px !important;
-    flex-wrap: nowrap !important; /* На больших планшетах держим один ряд */
-  }
-  .logo-img {
-    height: 60px !important;
-    width: 60px !important;
-  }
-  .logo-text {
-    font-size: 16px !important;
-  }
-  .nav-links {
-    gap: 20px !important; /* Компактные зазоры, чтобы всё влезло */
-    margin-right: 20px !important;
-  }
-  .nav-links a {
-    font-size: 13px !important;
-  }
-  .nav-action {
-    width: auto !important;
-    margin-top: 0 !important;
-  }
-  .btn-sales {
-    padding: 6px 14px !important;
-    font-size: 12px !important;
-  }
-  #products {
-    margin-top: 100vh !important;
-  }
-  .lang-switch {
-    color: #666666;
-    font-size: 14px;
-    font-family: monospace;
-    font-weight: bold;
-    margin-right: 25px !important; /* 🔥 НАШ ТОЧЕЧНЫЙ ИСПРАВИТЕЛЬ: оттолкнет ссылки вправо на 20 пикселей */
-  }
+.contact-icon {
+  font-size: 20px;
+  color: #007bc4;
+  width: 25px;
+  text-align: center;
 }
 
-/* ==========================================================================
-   📟 6. ТОЧКА ИДЕАЛЬНОГО ПЕРЕХОДА (821px) — ТОТАЛЬНЫЙ ОДНОРЯДНЫЙ МОНОЛИТ
-   ========================================================================== */
-@media (max-width: 860px) {
-  /* Жёстко запрещаем шапке биться на этажи. Держим чистый компактный ряд */
-  .main-nav {
-    flex-wrap: nowrap !important; /* Никаких переносов строк! */
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    height: 85px !important; /* Аккуратная фиксированная высота */
-    padding: 0 15px !important;
-    gap: 10px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Логотип и эмблема (Компактный размер) */
-  .logo-img {
-    height: 50px !important;
-    width: 50px !important;
-  }
-
-  .logo-text {
-    font-size: 14px !important;
-    white-space: nowrap !important;
-    display: inline-block !important; /* Имя компании гордо горит на экране */
-  }
-
-  /* Переключатель языков: аккуратно сидит в общем ряду */
-  .lang-switch {
-    font-size: 13px !important;
-    display: inline-block !important;
-    margin: 0 5px !important;
-    white-space: nowrap !important;
-    width: auto !important;
-    order: unset !important;
-  }
-
-  /* Правый блок управления: собираем гамбургер и кнопку вместе */
-  /* Гамбургер встаёт перед кнопкой или после неё в зависимости от естественного порядка */
-  .hamburger {
-    display: inline-block !important;
-    font-size: 24px !important;
-    color: #ffffff !important;
-    cursor: pointer !important;
-    order: 4 !important; /* Уводим в самый правый угол */
-    margin: 0 0 0 5px !important;
-  }
-
-  /* Длинные ссылки улетают в мобильную шторку */
-  .nav-links {
-    display: none !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    background-color: #0b0b0b !important;
-    position: absolute !important;
-    top: 85px !important; /* Выезжает строго под обрез новой шапки */
-    left: 0 !important;
-    padding: 20px 0 !important;
-    border-bottom: 1px solid #222222 !important;
-    z-index: 9998 !important;
-    margin: 0 !important;
-  }
-
-  .nav-links.active {
-    display: flex !important;
-  }
-
-  /* СИНЯЯ КНОПКА: Садится в один ряд, аккуратно поджимаясь к гамбургеру */
-  .nav-action {
-    width: auto !important; /* Отменяем раздувание на всю строку */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    margin-left: auto !important; /* Сама силой отталкивается к правому краю к гамбургеру */
-    margin-top: 0px !important;
-    order: 3 !important; /* Стоит прямо перед гамбургером */
-  }
-
-  .btn-sales {
-    font-size: 11px !important;
-    padding: 6px 12px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    white-space: nowrap !important;
-    display: inline-block !important;
-    width: auto !important;
-  }
-
-  /* ОТСТУП КОНТЕНТА: Возвращаем стандартный аккуратный зазор под шапкой */
-  .site-section,
-  #hardware.site-section,
-  #research.site-section,
-  #software.site-section,
-  #contacts.site-section {
-    margin-top: 100px !important;
-    padding-top: 10px !important;
-  }
+.contact-label {
+  color: #888888;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
-/* 📟 @media (max-width: 760px) */
-@media (max-width: 760px) {
-  .main-nav {
-    height: 130px !important;
-  }
-  .logo-img {
-    height: 50px !important;
-    width: 50px !important;
-  }
-  .logo-text {
-    font-size: 14px !important;
-  }
-  .nav-links {
-    gap: 12px !important;
-  }
-  .nav-links a {
-    font-size: 13px !important;
-  }
-}
+/* ==================================================================================
+   ======================    @media (max-width: 2560px)  =============================
+   ==================================================================================  */
 
-/* ==========================================================================
-   📱 МОБИЛЬНЫЙ КОНТУР И ТВОЙ SAMSUNG S24 ULTRA
-   ========================================================================== */
-
-/* 📱 @media (max-width: 575px) */
-@media (max-width: 575px) {
+@media (max-width: 2560x) and (min-width: 1441px) {
   .main-nav {
-    height: 125px !important;
-    padding: 8px 12px !important;
-  }
-  .logo-img {
-    height: 45px !important;
-    width: 45px !important;
-  }
-  .logo-text {
-    max-width: 130px !important;
-    line-height: 1.2 !important;
-  }
-  .nav-links {
-    gap: 8px !important;
-  }
-  .nav-links a {
-    font-size: 12px !important;
-  }
-  .btn-sales {
-    padding: 6px 12px !important;
-    font-size: 11px !important;
-  }
-}
-
-/* 📱 @media (max-width: 480px) */
-@media (max-width: 480px) {
-  .main-nav {
-    height: 120px !important;
-  }
-  .logo-text {
-    font-size: 13px !important;
-  }
-  .nav-links a {
-    font-size: 11px !important;
-  }
-}
-
-/* 📱 @media (max-width: 425px) (Специфика Твоего Samsung Ultra) */
-@media (max-width: 425px) {
-  .main-nav {
-    height: 115px !important;
+    height: 100px !important;
+    padding: 6px 6px !important;
+    margin: 0;
     gap: 3px !important;
   }
   /* СКРЫВАЕМ ТЕКСТ НАЗВАНИЯ ДЛЯ ИДЕАЛЬНОГО ОТОБРАЖЕНИЯ НА МОБИЛКАХ */
@@ -960,6 +691,12 @@ header {
     height: 40px !important;
     width: 40px !important;
   }
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
   .nav-links {
     gap: 6px !important;
   }
@@ -970,136 +707,482 @@ header {
     padding: 5px 10px !important;
     font-size: 10px !important;
   }
-  /* Переводим плеер в эластичные 16:9 и вытягиваем чертежи в ленту */
-  .product-video {
-    height: auto !important;
-    max-height: 230px !important;
+
+  /* Включаем гамбургер (max-width: 425px) */
+  .hamburger {
+    display: inline-block !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    order: 2 !important;
   }
-  .media-images {
-    flex-direction: column !important;
-    gap: 15px !important;
+  div.nav-action,
+  .nav-action {
+    margin-top: 0px !important; /* НАШ СИЛОВОЙ ИСПРАВИТЕЛЬ: стирает 10px в ноль! */
+    margin-bottom: 0px !important;
+    margin-left: 12px !important; /* Аккуратно поджимает кнопку вправо к гамбургеру */
+    margin-right: 10px !important;
+    width: auto !important; /* Сжимаем коробку до реального размера кнопки */
+    display: flex !important;
+    align-items: end !important;
+  }
+
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 60%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px !important;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
 
-/* ==========================================================================
-   📟 6. СРЕДНИЕ ЭКРАНЫ И ПЛАНШЕТЫ (821px - 456px) — ИДЕАЛЬНЫЙ ОДНОРЯДНЫЙ МОНОЛИТ
-   ========================================================================== */
-@media (max-width: 821px) and (min-width: 456px) {
+/* ==================================================================================
+   ===========    @media (max-width: 1441px) and (min-width: 1200px)  ===============
+   ==================================================================================  */
+
+@media (max-width: 1441px) and (min-width: 1200px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
   .main-nav {
-    flex-wrap: nowrap !important; /* Строго один ряд! */
+    flex-wrap: nowrap !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    height: 85px !important;
-    padding: 0 20px !important;
-    gap: 12px !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
     box-sizing: border-box !important;
   }
 
   .logo-img {
-    height: 50px !important;
-    width: 50px !important;
-  }
-
-  .logo-text {
-    font-size: 14px !important;
-    white-space: nowrap !important;
-    display: inline-block !important;
+    height: 60px !important;
+    width: 60px !important;
   }
 
   .lang-switch {
-    font-size: 13px !important;
-    display: inline-block !important;
-    margin: 0 10px !important;
-    white-space: nowrap !important;
+    font-size: 12px !important;
+    /* margin: 0 10px !important; */
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+    margin-right: auto !important;
   }
 
-  .hamburger {
-    display: inline-block !important;
-    font-size: 24px !important;
-    color: #ffffff !important;
-    order: 4 !important;
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  /* ВОЗВРАЩАЕМ МЕНЮ НА НАШУ БАЗУ */
+  div.nav-links,
+  .nav-links {
+    display: flex !important; /* 🔥 ГЛАВНЫЙ ИСПРАВИТЕЛЬ: надпись и ссылки снова появились на экране! */
+    flex-direction: row !important; /* Выстраиваем их строго по горизонтали */
+    align-items: center !important;
+    gap: 10px !important; /* Компактный зазор между надписями, чтобы всё влезло на 471px */
+    margin: 0 !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* РИСУЕМ БРУТАЛЬНЫЕ ПОЛОСКИ ДЛЯ КАЖДОГО ЭЛЕМЕНТА МЕНЮ НА ПЛАНШЕТАХ */
+  .nav-links a {
+    border-right: 2px solid rgba(255, 255, 255, 0.3) !important; /* Нарисовали тонкую полупрозрачную белую черту справа */
+    padding-right: 12px !important; /* Дали зазор внутри ссылки ДО полоски */
+    margin-right: 4px !important; /* Дали зазор СНАРУЖИ после полоски, чтобы слова не слипались */
     margin-left: 10px !important;
   }
 
-  .nav-links {
-    display: none !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    background-color: #0b0b0b !important;
-    position: absolute !important;
-    top: 85px !important;
-    left: 0 !important;
-    padding: 20px 0 !important;
-    border-bottom: 1px solid #222222 !important;
-    z-index: 9998 !important;
-    margin: 0 !important;
+  /* 🪓 ГРОССМЕЙСТЕРСКИЙ ШТРИХ: Убираем полоску у самого последнего элемента (Dev Log), 
+   чтобы она не спорила с синей кнопкой! */
+  .nav-links a:last-child {
+    border-right: none !important;
   }
 
-  .nav-links.active {
-    display: flex !important;
-  }
-
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
   .nav-action {
     width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
     display: flex !important;
     align-items: center !important;
-    margin-left: auto !important;
-    margin-top: 0px !important;
-    order: 3 !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
   }
 
   .btn-sales {
+    padding: 6px 12px !important;
     font-size: 11px !important;
-    padding: 6px 14px !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
     white-space: nowrap !important;
+    display: inline-block !important;
   }
 
-  .site-section,
-  #hardware.site-section,
-  #research.site-section,
-  #software.site-section,
-  #contacts.site-section {
-    margin-top: 100px !important;
-    padding-top: 10px !important;
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: none !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
-  /* УЖИМАЕМ РАЗДУВАНИЕ ТЕКСТА: буквы становятся компактнее и не прыгают вверх! */
-  h1.main-title,
-  .section-content h2,
-  .div-intro-bg h1 {
-    font-size: 28px !important; /* Уменьшили размер заголовка, чтобы он не упирался в меню */
-    line-height: 1.2 !important;
-    margin-bottom: 15px !important;
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
-  .section-content p,
   .intro-manifest-text {
-    font-size: 14px !important; /* Текст манифеста аккуратно сжимается */
-    line-height: 1.6 !important;
-    margin-bottom: 15px !important;
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
   }
 
-  /* Расширяем рабочую зону контента, чтобы строчки не ломались слишком рано */
-  .section-content {
-    width: 95% !important;
-    max-width: 720px !important;
-    padding: 20px 15px !important;
-    margin: 0 auto !important;
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
 
-/* ==========================================================================
-   📱 7. СМАРТФОНЫ ДО 455px — КНОПКА ЗАБЛАГОВРЕМЕННО УХОДИТ ВНИЗ
-   ========================================================================== */
-@media (max-width: 490px) {
+/* ==================================================================================
+   ===========    @media (max-width: 1200px) and (min-width: 1061px)  ===============
+   ==================================================================================  */
+
+@media (max-width: 1200px) and (min-width: 1061px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
   .main-nav {
-    flex-wrap: wrap !important; /* Автоматика включает два этажа раньше */
-    height: 115px !important;
-    padding: 10px 15px !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 60px !important;
+    width: 60px !important;
+  }
+
+  .lang-switch {
+    font-size: 12px !important;
+    /* margin: 0 10px !important; */
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+    margin-right: auto !important;
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  /* ВОЗВРАЩАЕМ МЕНЮ НА НАШУ БАЗУ */
+  div.nav-links,
+  .nav-links {
+    display: flex !important; /* 🔥 ГЛАВНЫЙ ИСПРАВИТЕЛЬ: надпись и ссылки снова появились на экране! */
+    flex-direction: row !important; /* Выстраиваем их строго по горизонтали */
+    align-items: center !important;
+    gap: 10px !important; /* Компактный зазор между надписями, чтобы всё влезло на 471px */
+    margin: 0 !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* РИСУЕМ БРУТАЛЬНЫЕ ПОЛОСКИ ДЛЯ КАЖДОГО ЭЛЕМЕНТА МЕНЮ НА ПЛАНШЕТАХ */
+  .nav-links a {
+    border-right: 2px solid rgba(255, 255, 255, 0.3) !important; /* Нарисовали тонкую полупрозрачную белую черту справа */
+    padding-right: 12px !important; /* Дали зазор внутри ссылки ДО полоски */
+    margin-right: 4px !important; /* Дали зазор СНАРУЖИ после полоски, чтобы слова не слипались */
+    margin-left: 10px !important;
+  }
+
+  /* 🪓 ГРОССМЕЙСТЕРСКИЙ ШТРИХ: Убираем полоску у самого последнего элемента (Dev Log), 
+   чтобы она не спорила с синей кнопкой! */
+  .nav-links a:last-child {
+    border-right: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: none !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   =============    @media (max-width: 1061px) and (min-width: 871px)  ==============
+   ==================================================================================  */
+
+@media (max-width: 1061px) and (min-width: 871px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
     box-sizing: border-box !important;
   }
 
@@ -1108,146 +1191,1158 @@ header {
     width: 40px !important;
   }
 
+  .lang-switch {
+    font-size: 12px !important;
+    /* margin: 0 10px !important; */
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+    margin-right: auto !important;
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  /* ВОЗВРАЩАЕМ МЕНЮ НА НАШУ БАЗУ */
+  div.nav-links,
+  .nav-links {
+    display: flex !important; /* 🔥 ГЛАВНЫЙ ИСПРАВИТЕЛЬ: надпись и ссылки снова появились на экране! */
+    flex-direction: row !important; /* Выстраиваем их строго по горизонтали */
+    align-items: center !important;
+    gap: 10px !important; /* Компактный зазор между надписями, чтобы всё влезло на 471px */
+    margin: 0 !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* РИСУЕМ БРУТАЛЬНЫЕ ПОЛОСКИ ДЛЯ КАЖДОГО ЭЛЕМЕНТА МЕНЮ НА ПЛАНШЕТАХ */
+  .nav-links a {
+    border-right: 2px solid rgba(255, 255, 255, 0.3) !important; /* Нарисовали тонкую полупрозрачную белую черту справа */
+    padding-right: 12px !important; /* Дали зазор внутри ссылки ДО полоски */
+    margin-right: 4px !important; /* Дали зазор СНАРУЖИ после полоски, чтобы слова не слипались */
+    margin-left: 10px !important;
+  }
+
+  /* 🪓 ГРОССМЕЙСТЕРСКИЙ ШТРИХ: Убираем полоску у самого последнего элемента (Dev Log), 
+   чтобы она не спорила с синей кнопкой! */
+  .nav-links a:last-child {
+    border-right: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: none !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   ===========    @media (max-width: 871px) and (min-width: 769px)  ===============
+   ==================================================================================  */
+
+@media (max-width: 871px) and (min-width: 769px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  /* Скрываем текст названия Kaminski Robotics на 471px ради спасения места */
+  .logo-block .logo-text,
   .logo-text {
-    display: none !important; /* Убираем текст, полностью разгружая шапку */
+    display: none !important;
   }
 
   .lang-switch {
     font-size: 12px !important;
+    margin: 0 10px !important;
   }
 
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  /* ВОЗВРАЩАЕМ МЕНЮ НА НАШУ БАЗУ */
+  div.nav-links,
+  .nav-links {
+    display: flex !important; /* 🔥 ГЛАВНЫЙ ИСПРАВИТЕЛЬ: надпись и ссылки снова появились на экране! */
+    flex-direction: row !important; /* Выстраиваем их строго по горизонтали */
+    align-items: center !important;
+    gap: 10px !important; /* Компактный зазор между надписями, чтобы всё влезло на 471px */
+    margin: 0 !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* РИСУЕМ БРУТАЛЬНЫЕ ПОЛОСКИ ДЛЯ КАЖДОГО ЭЛЕМЕНТА МЕНЮ НА ПЛАНШЕТАХ */
+  .nav-links a {
+    border-right: 2px solid rgba(255, 255, 255, 0.3) !important; /* Нарисовали тонкую полупрозрачную белую черту справа */
+    padding-right: 12px !important; /* Дали зазор внутри ссылки ДО полоски */
+    margin-right: 4px !important; /* Дали зазор СНАРУЖИ после полоски, чтобы слова не слипались */
+  }
+
+  /* 🪓 ГРОССМЕЙСТЕРСКИЙ ШТРИХ: Убираем полоску у самого последнего элемента (Dev Log), 
+   чтобы она не спорила с синей кнопкой! */
+  .nav-links a:last-child {
+    border-right: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: none !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   =============    @media (max-width: 769px) and (min-width: 471px)  ===============
+   ==================================================================================  */
+
+@media (max-width: 769px) and (min-width: 471px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  /* Скрываем текст названия Kaminski Robotics на 471px ради спасения места */
+  .logo-block .logo-text,
+  .logo-text {
+    display: none !important;
+  }
+
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  div.nav-links,
+  .nav-links {
+    display: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: inline-block !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  h1.main-title,
+  .main-title,
+  div.intro-content h1 {
+    font-size: 24px !important; /* Силой уменьшили до 24px, чтобы он не давил на экран! */
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    margin-bottom: 8px !important;
+  }
+
+  /* 4. УМЕНЬШАЕМ ЗАГОЛОВКИ РАЗДЕЛОВ (HARDWARE, SOFTWARE, LAB) ДЛЯ 320px */
+  .section-content h2,
+  div.section-content h2,
+  h2 {
+    font-size: 18px !important; /* Срезали до жестких 18px (было 36px) */
+    line-height: 1.2 !important; /* Буквы стоят плотно и брутально */
+    margin-bottom: 15px !important; /* Аккуратный зазор до текста */
+    border-left: 3px solid #007bc4 !important; /* Наша синяя фирменная черта слева становится чуть тоньше */
+    padding-left: 10px !important;
+  }
+
+  p.intro-manifest-text,
+  .intro-manifest-text,
+  div.intro-content p,
+  .section-content p {
+    font-size: 12px !important; /* Буквы стали мелкими, строгими и аккуратными */
+    line-height: 1.4 !important; /* Сжали строки, чтобы убрать вертикальный распор */
+    margin-bottom: 10px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   ====================    @media (max-width: 471px)=================================
+   ==================================================================================  */
+
+@media (max-width: 471px) {
+  /* Жёстко держим один тонкий компактный ряд, ничего не переносим */
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  /* Скрываем текст названия Kaminski Robotics на 471px ради спасения места */
+  .logo-block .logo-text,
+  .logo-text {
+    display: none !important;
+  }
+
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  div.nav-links,
+  .nav-links {
+    display: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: inline-block !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 42%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   ======================    @media (max-width: 426px)  =============================
+   ==================================================================================  */
+
+@media (max-width: 426px) {
+  .main-nav {
+    height: 100px !important;
+    padding: 6px 6px !important;
+    margin: 0;
+    gap: 3px !important;
+  }
+  /* СКРЫВАЕМ ТЕКСТ НАЗВАНИЯ ДЛЯ ИДЕАЛЬНОГО ОТОБРАЖЕНИЯ НА МОБИЛКАХ */
+  .logo-text {
+    display: none !important;
+  }
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  .nav-links {
+    gap: 6px !important;
+  }
+  .nav-links a {
+    font-size: 10.5px !important;
+  }
+  .btn-sales {
+    padding: 5px 10px !important;
+    font-size: 10px !important;
+  }
+
+  /* Включаем гамбургер (max-width: 425px) */
   .hamburger {
     display: inline-block !important;
     font-size: 22px !important;
     color: #ffffff !important;
     order: 2 !important;
   }
+  div.nav-action,
+  .nav-action {
+    margin-top: 0px !important; /* НАШ СИЛОВОЙ ИСПРАВИТЕЛЬ: стирает 10px в ноль! */
+    margin-bottom: 0px !important;
+    margin-left: 12px !important; /* Аккуратно поджимает кнопку вправо к гамбургеру */
+    margin-right: 10px !important;
+    width: auto !important; /* Сжимаем коробку до реального размера кнопки */
+    display: flex !important;
+    align-items: end !important;
+  }
 
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   ========================    @media (max-width: 377px)  ===========================
+   ==================================================================================  */
+
+@media (max-width: 377px) {
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  /* Скрываем текст названия Kaminski Robotics на 471px ради спасения места */
+  .logo-block .logo-text,
+  .logo-text {
+    display: none !important;
+  }
+
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  div.nav-links,
   .nav-links {
     display: none !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    background-color: #0b0b0b !important;
-    position: absolute !important;
-    top: 115px !important;
-    left: 0 !important;
-    padding: 20px 0 !important;
-    border-bottom: 1px solid #222222 !important;
-    z-index: 9998 !important;
-    margin: 0 !important;
   }
 
-  .nav-links.active {
-    display: flex !important;
-  }
-
-  /* Кнопка мягко и безопасно уходит вниз строго по центру */
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
   .nav-action {
-    width: 100% !important;
-    justify-content: center !important;
-    margin-left: 0 !important;
-    margin-top: 10px !important;
-    order: 4 !important;
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
   }
 
   .btn-sales {
-    font-size: 10px !important;
     padding: 6px 12px !important;
+    font-size: 11px !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
     white-space: nowrap !important;
     display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: inline-block !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
     width: auto !important;
-  }
-
-  .product-video {
     height: auto !important;
-    max-height: 230px !important;
   }
-
-  .media-images {
-    flex-direction: column !important;
-    gap: 15px !important;
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
   }
-
-  .site-section,
-  #hardware.site-section,
-  #research.site-section,
-  #software.site-section,
-  #contacts.site-section {
-    margin-top: 130px !important;
-    padding-top: 10px !important;
-  }
-
-  .section-content {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  .contact-item {
-    padding: 12px 15px !important;
-    font-size: 14px !important;
-  }
-}
-
-/* 📱 @media (max-width: 320px) (Предельно узкие экраны) */
-@media (max-width: 320px) {
-  .main-nav {
-    height: 110px !important;
-    padding: 6px 6px !important;
-  }
-  .logo-img {
-    height: 34px !important;
-    width: 34px !important;
-  }
-  .lang-switch {
-    font-size: 11px !important;
-  }
-  .nav-links {
-    gap: 4px !important;
-  }
-  .nav-links a {
-    font-size: 9.5px !important;
-  }
-  .btn-sales {
-    padding: 4px 8px !important;
-    font-size: 9.5px !important;
-  }
-}
-
-/* ==========================================================================
-   🤖 ФИНАЛЬНАЯ ЗАЩИТА ТЕКСТА ОТ ВЫТАЛКИВАНИЯ (ДИАПАЗОН: ДО 630px)
-   ========================================================================== */
-@media (max-width: 665px) {
-  /* Когда строчки начинают ломаться и расти вверх, мы силой отодвигаем весь контент ниже! */
-  .site-section,
-  #hardware.site-section,
-  #research.site-section,
-  #software.site-section,
-  #contacts.site-section {
-    margin-top: 155px !important; /* Увеличили зазор, чтобы раздувающийся текст никогда не достал до меню */
-    padding-top: 10px !important;
-  }
-
-  /* Дополнительно сжимаем шрифт заголовка, чтобы он занимал меньше места в высоту */
-  h1.main-title,
-  .section-content h2,
-  .div-intro-bg h1 {
-    font-size: 26px !important;
-    line-height: 1.1 !important;
-    margin-bottom: 12px !important;
-  }
-
-  /* Делаем абзацы манифеста чуть компактнее */
-  .section-content p,
-  .intro-manifest-text {
-    font-size: 13.5px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 12px !important;
-  }
+  div.intro-content,
   .intro-content {
-    top: 67%;
-    height: auto;
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==================================================================================
+   =============================    @media (max-width: 320px)  ======================
+   ==================================================================================  */
+
+@media (max-width: 320px) {
+  div.main-nav,
+  .main-nav {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 75px !important;
+    padding: 0 12px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logo-img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  /* Скрываем текст названия Kaminski Robotics на 471px ради спасения места */
+  .logo-block .logo-text,
+  .logo-text {
+    display: none !important;
+  }
+
+  .lang-switch {
+    font-size: 12px !important;
+    margin: 0 10px !important;
+    order: 2 !important; /* Встаёт второй по порядку слева */
+  }
+
+  /* Наглухо тушим длинные ссылки, чтобы они не взрывали шапку */
+  div.nav-links,
+  .nav-links {
+    display: none !important;
+  }
+
+  /* 🔥 СИНЯЯ КНОПКА: Перелетает на ЧЕТВЁРТОЕ место (на самый правый край шапки) */
+  div.nav-action,
+  .nav-action {
+    width: auto !important;
+    margin-top: 0px !important;
+    margin-left: 12px !important; /* Зазор слева, чтобы кнопка не липла к гамбургеру */
+    margin-right: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    order: 4 !important; /* 🔥 СТАЛА ЧЕТВЁРТОЙ: замыкает правый угол экрана! */
+  }
+
+  .btn-sales {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  /* 🔥 ГАМБУРГЕР: Намертво запечатываем в самый правый угол */
+  div.hamburger,
+  .hamburger {
+    display: inline-block !important;
+    font-size: 22px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    order: 3 !important; /* 🔥 СТАЛ ТРЕТЬИМ: теперь он идёт ПЕРЕД кнопкой! */
+    margin: 0 0 0 auto !important; /* Пружина толкает его и кнопку к правому краю */
+    padding: 0 4px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* ЗАЩИТА ЗАГОЛОВКА: Смещаем контент первого экрана ниже */
+  div.div-intro-bg,
+  div.intro-bg,
+  .intro-bg {
+    margin-top: 85px !important;
+    padding-top: 0px !important;
+  }
+
+  div.intro-content,
+  .intro-content {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    right: 3%;
+    transform: translateY(-50%);
+    max-width: 650px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 10px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content h1 {
+    color: #ffffff;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    line-height: 1.1 !important; /* Уплотнили межстрочный интервал */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    color: #007bc4;
+    font-size: 18px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-manifest-text {
+    color: #ffffff !important; /* ИСПРАВЛЕНО: Сделали цвет букв чисто белым для максимальной контрастности */
+    font-size: 12px !important; /* ИСПРАВЛЕНО: Резко подняли размер шрифта текста с 15px до 18px! */
+    line-height: 1.8 !important; /* Сделали шаг между строками свободнее */
+    margin: 0;
+  }
+
+  .intro-content_two {
+    position: absolute;
+    top: 50%; /* Слегка скорректировали центровку по вертикали */
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 700px; /* ИСПРАВЛЕНО: Расширили бокс с 550px до 650px для крупных букв */
+    z-index: 5;
+    padding: 35px;
+    background: rgba(
+      5,
+      5,
+      5,
+      0.65
+    ); /* Чуть-чуть плотнее сделали подложку для четкости */
+    border-left: 5px solid #007bc4; /* Сделали синюю линию толще и заметнее */
+    border-radius: 4px;
+  }
+
+  .intro-content_two h1 {
+    color: #ffffff;
+    font-size: 56px; /* ИСПРАВЛЕНО: Увеличили главный заголовок с 48px до 56px */
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .intro-content_two h2 {
+    color: #007bc4;
+    font-size: 24px; /* ИСПРАВЛЕНО: Увеличили подзаголовок с 20px до 24px */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
